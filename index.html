@@ -3,52 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milk Website</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #e0eff1; }
-        .header { background-color: #4a90e2; color: white; padding: 20px; text-align: center; }
-        .nav { padding: 10px; text-align: center; }
-        .nav button { background-color: #f8ca00; border: none; padding: 10px 20px; margin: 0 10px; cursor: pointer; border-radius: 5px; font-weight: bold; }
-        .product { background-color: #ffffff; padding: 20px; margin: 20px auto; max-width: 960px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .product img { width: 100%; max-width: 300px; height: auto; margin: 0 auto; display: block; }
-        .footer { background-color: #4a90e2; color: white; text-align: center; padding: 10px; margin-top: 20px; }
-        form { background-color: #ffffff; padding: 20px; margin: 20px auto; max-width: 960px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        input, textarea { width: calc(100% - 22px); padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; }
-        input[type=submit] { background-color: #f8ca00; color: black; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            padding: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
 
-<div class="header">
-    <h1>Milk Company</h1>
-    <div class="nav">
-        <button>Home</button>
-        <button>Product</button>
-    </div>
-</div>
+<h2>Contact Milk Company</h2>
 
-<div class="product">
-    <img src="your-milk-product-image.jpg" alt="Milk Product">
-    <h2>Pure Organic Milk</h2>
-    <p>This 100% organic milk comes from the happiest cows on earth, which graze freely on lush, green pastures.</p>
-</div>
-
-<div class="footer">
-    &copy; 2023 Milk Company. All rights reserved.
-</div>
-
+<!-- Start of form -->
 <form>
-    <h2>Contact Us</h2>
+    <label for="name">Your Name:</label>
     <input type="text" id="name" name="name" placeholder="Your Name">
+    
+    <label for="email">Your Email:</label>
     <input type="email" id="email" name="email" placeholder="Your Email">
+    
+    <label for="message">Your Message:</label>
     <textarea id="message" name="message" placeholder="Your Message"></textarea>
+    
     <input type="submit" value="Send">
 </form>
-
-<script>
-    document.querySelector('.nav button').onclick = function() {
-        alert("Navigate through the menu.");
-    };
-</script>
+<!-- End of form -->
 
 </body>
 </html>
